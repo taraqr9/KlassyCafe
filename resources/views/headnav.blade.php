@@ -40,7 +40,7 @@
                                     @endif
                                 </ul>
                             </li>
-                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                            
 
                         </ul>
                         <a class='menu-trigger'>
