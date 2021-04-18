@@ -3,12 +3,14 @@
 
 <head>
 
-    <meta charset="utf-8">
+    <!-- <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+
+    @yield('headerFiles')
 
     <title>Klassy Cafe - Restaurant HTML</title>
     <!--
@@ -72,17 +74,16 @@ https://templatemo.com/tm-558-klassy-cafe
                         -->
                             <li class="scroll-to-section"><a href="/menu">Menu</a></li>
                             <li class="scroll-to-section"><a href="/chefs">Chefs</a></li>
+                            <li class="scroll-to-section"><a href="/reservation">Contact Us</a></li>
                             <li class="submenu">
-                                <a href="javascript:;">Features</a>
+                                <a href="javascript:;">User</a>
                                 <ul>
-                                    <li><a href="#">Features Page 1</a></li>
-                                    <li><a href="#">Features Page 2</a></li>
-                                    <li><a href="#">Features Page 3</a></li>
-                                    <li><a href="#">Features Page 4</a></li>
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/register">Registration</a></li>
                                 </ul>
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
-                            <li class="scroll-to-section"><a href="/reservation">Contact Us</a></li>
+                            
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
