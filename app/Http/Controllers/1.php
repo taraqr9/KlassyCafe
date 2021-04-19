@@ -1,4 +1,15 @@
-public function store(Request $request){
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Reservation;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class ReservationController extends Controller
+{
+    
+    public function store(Request $request){
         $user_id = Auth::user()->id;
 
         $reservation = new Reservation([
@@ -17,3 +28,4 @@ public function store(Request $request){
         $reservation->save();
         return view('/successful');
     }
+}

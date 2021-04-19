@@ -75,9 +75,13 @@ https://templatemo.com/tm-558-klassy-cafe
     @yield('reservation')
     <!-- ***** Reservation Area Ends ***** -->
 
-    <!-- ***** Login Start ***** -->
-    
-    <!-- ***** Login Start ***** -->
+    <!-- ***** Successfull ***** -->
+    @yield('successful')
+    <!-- ***** Successfull ***** -->
+
+    <!-- ***** Successfull ***** -->
+    @yield('myreservation')
+    <!-- ***** Successfull ***** -->
 
     <!-- ***** Footer Start ***** -->
     @extends('footer')
