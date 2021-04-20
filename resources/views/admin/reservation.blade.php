@@ -40,7 +40,7 @@
 
                                 </tr>
 
-                                @foreach ($myAllReservation as $item)
+                                @foreach ($allRequest as $item)
                                     <tr>
                                         <td class="col-lg-1" style="border: 1px solid black; border-radius: 10px;">
                                             {{ $item->name }}</td>
@@ -58,18 +58,21 @@
                                             {{ $item->message }}</td>
 
                                         @if ($item->status == false)
-                                            <form action="/deleteReservation" method="post">
+                                            <form action="/admindelete" method="post">
                                                 @csrf
                                                 <td>
+                                                    <button name="approveReservation" class="btn btn-outline-success m-3"
+                                                        value="{{ $id = $item->id }}">Approve</button>
                                                     <button name="deleteReservation" class="btn btn-outline-danger m-3"
                                                         value="{{ $id = $item->id }}">Delete</button>
                                                 </td>
-                                            </form>
-                                        @else
-                                            <td class="col-lg-1 bg-success text-white"
-                                                style="border: 1px solid black; border-radius: 10px;">Approved</td>
-                                        @endif
 
+                                            @else
+                                                <td class="col-lg-1 " style="border: 1px solid black; border-radius: 10px;">
+                                                    <span class="btn bg-success text-white">Approved</span>
+                                                </td>
+                                        @endif
+                                        </form>
                                     </tr>
 
                                 @endforeach
