@@ -14,7 +14,7 @@
                         <li class="scroll-to-section"><a href="/about">About</a></li>
                         <li class="scroll-to-section"><a href="/menu">Menu</a></li>
                         <li class="scroll-to-section"><a href="/chefs">Chefs</a></li>
-                        <li class="scroll-to-section"><a href="/reservation">Contact Us</a></li>
+                        <li class="scroll-to-section"><a href="/reservation">Resrvation</a></li>
                         <li class="submenu">
                             <a href="javascript:;">User</a>
                             <ul>
@@ -25,7 +25,7 @@
                                     @endif
                                 @else
                                     <li><a href="#UserProfile"> {{ Auth::user()->name }} </a></li>
-                                    <li><a href="#BookedTable">About Reservation</a></li>
+                                    <li><a href="myreservation">My Reservation</a></li>
                                     <li>
                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">

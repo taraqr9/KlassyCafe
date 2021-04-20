@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReservationController;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,8 +24,15 @@ Route::get('/reservation',function(){
     return view('reservation');
 });
 
-
 Auth::routes();
-
-
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/myreservation',[ReservationController::class,'store']);
+
+Route::get('/myreservation',function(){
+    $myAllReservation = Reservation::all()->sortByDesc('id')->where('user_id',Auth::user()->id);
+    return view('myreservation', compact('myAllReservation'));;
+});
+
+Route::post('/deleteReservation',[ReservationController::class,'destroy']);
+
