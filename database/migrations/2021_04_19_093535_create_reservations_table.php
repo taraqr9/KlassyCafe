@@ -25,6 +25,11 @@ class CreateReservationsTable extends Migration
             $table->string('message')->nullable();
             $table->boolean('status')->default(0);
             $table->timestamps();
+
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
