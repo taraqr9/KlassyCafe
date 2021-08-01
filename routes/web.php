@@ -30,6 +30,7 @@ Auth::routes();
 Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::post('/myreservation', [ReservationController::class, 'store']);
+Route::get('/download', [ReservationController::class, 'downloadPdf']);
 
 Route::get('/myreservation', function () {
     if (Auth::check()) {

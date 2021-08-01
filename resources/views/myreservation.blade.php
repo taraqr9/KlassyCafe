@@ -18,6 +18,9 @@
                             @endif
 
                         </div>
+                        <div>
+                            <a href="download" class="btn btn-outline-success mb-5 ml-3">Download PDF</a>
+                        </div>
                         <div class="col-lg-12 mb-4">
                             <table style="border-collapse: separate; border: 1px solid black; border-radius: 10px;">
                                 <tr class="col-lg-12">
